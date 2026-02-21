@@ -1,0 +1,37 @@
+name: Lingo.dev Auto-Translate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/locales/en.json"
+
+jobs:
+  translate:
+    name: Auto-translate with Lingo.dev
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Push source strings to Lingo.dev
+        run: npx lingo.dev@latest push
+        env:
+          LINGO_API_KEY: ${{ secrets.LINGO_API_KEY }}
+
+      - name: Pull translated strings from Lingo.dev
+        run: npx lingo.dev@latest pull
+        env:
+          LINGO_API_KEY: ${{ secrets.LINGO_API_KEY }}
+
+      - name: Commit translated files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🌍 Auto-translate via Lingo.dev [skip ci]"
+          file_pattern: "src/locales/*.json"

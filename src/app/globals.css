@@ -1,0 +1,822 @@
+@import "tailwindcss";
+
+:root {
+  /* Stardew Valley Palette */
+  --pixel-black: #2d1b0e;
+  /* Dark wood/soil */
+  --pixel-white: #f4ecd7;
+  /* Parchment/Cream */
+  --pixel-red: #cc4224;
+  /* Brick/Barn Red */
+  --pixel-orange: #d16616;
+  /* Pumpkin */
+  --pixel-yellow: #e8b923;
+  /* Gold/Wheat */
+  --pixel-green: #4d8f37;
+  /* Grass/Forest */
+  --pixel-blue: #2a8db8;
+  /* River/Sky */
+  --pixel-purple: #7c4b82;
+  /* Grape/Berry */
+  --pixel-brown: #8b5a2b;
+  /* Wood */
+  --pixel-dark: #4a2c17;
+  /* Darker wood background */
+  --pixel-darker: #261409;
+  /* Deep background */
+
+  --shadow-color: rgba(45, 27, 14, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  image-rendering: pixelated;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--pixel-darker);
+  font-family: var(--font-pixel), "Press Start 2P", cursive, monospace;
+  color: var(--pixel-white);
+  overflow: hidden;
+  /* Prevent scrolling on game screen */
+}
+
+/* Wood frame style box */
+.pixel-box {
+  position: relative;
+  background: #e4d5b7;
+  /* Parchment background */
+  color: #4a2c17;
+  border: 4px solid #8b5a2b;
+  box-shadow:
+    inset 0 0 0 4px #c2a677,
+    /* Inner light wood */
+    4px 4px 0 var(--shadow-color);
+  image-rendering: pixelated;
+  border-radius: 4px;
+}
+
+/* Variant boxes */
+.pixel-box-yellow {
+  background: #fff8e1;
+  border: 4px solid #e8b923;
+  color: #5c4500;
+  box-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.pixel-box-green {
+  background: #e8f5e9;
+  border: 4px solid #4d8f37;
+  color: #1b5e20;
+  box-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.pixel-box-blue {
+  background: #e1f5fe;
+  border: 4px solid #2a8db8;
+  color: #01579b;
+  box-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.pixel-box-purple {
+  background: #f3e5f5;
+  border: 4px solid #7c4b82;
+  color: #4a148c;
+  box-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+/* Wooden buttons */
+.pixel-btn {
+  font-family: var(--font-pixel), "Press Start 2P", cursive, monospace;
+  font-size: 10px;
+  padding: 12px 20px;
+  border: 3px solid #5d4037;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.05s, box-shadow 0.05s;
+  image-rendering: pixelated;
+  background: #8d6e63;
+  color: #fff;
+  box-shadow: 0 4px 0 #3e2723;
+  text-shadow: 1px 1px 0 #3e2723;
+  border-radius: 4px;
+}
+
+.pixel-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #3e2723;
+}
+
+.pixel-btn-yellow {
+  background: #ffb300;
+  border-color: #ff6f00;
+  box-shadow: 0 4px 0 #e65100;
+  color: #fff;
+}
+
+.pixel-btn-yellow:hover {
+  background: #ffca28;
+}
+
+.pixel-btn-red {
+  background: #e53935;
+  border-color: #b71c1c;
+  box-shadow: 0 4px 0 #c62828;
+}
+
+.pixel-btn-red:hover {
+  background: #ef5350;
+}
+
+.pixel-btn-green {
+  background: #43a047;
+  border-color: #1b5e20;
+  box-shadow: 0 4px 0 #2e7d32;
+}
+
+.pixel-btn-green:hover {
+  background: #66bb6a;
+}
+
+.pixel-btn-blue {
+  background: #039be5;
+  border-color: #01579b;
+  box-shadow: 0 4px 0 #0277bd;
+}
+
+.pixel-btn-purple {
+  background: #8e24aa;
+  border-color: #4a148c;
+  box-shadow: 0 4px 0 #6a1b9a;
+}
+
+.pixel-btn-purple:hover {
+  background: #ab47bc;
+}
+
+.pixel-btn-disabled {
+  background: #9e9e9e;
+  border-color: #616161;
+  box-shadow: 0 4px 0 #616161;
+  cursor: not-allowed;
+  color: #e0e0e0;
+}
+
+/* Pixel input (Parchment style) */
+.pixel-input {
+  font-family: var(--font-pixel), "Press Start 2P", cursive, monospace;
+  font-size: 14px;
+  background: #fff8e1;
+  color: #3e2723;
+  border: 4px solid #8d6e63;
+  padding: 10px 14px;
+  outline: none;
+  letter-spacing: 2px;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.pixel-input:focus {
+  border-color: #ffb300;
+  box-shadow: 0 0 0 2px #ffe082;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3e2723;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8d6e63;
+  border: 2px solid #3e2723;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes float-pixel {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 179, 0, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 179, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 179, 0, 0);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+/* Character walking bounce */
+@keyframes walk-bob {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Fade in for overlays */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Removed scanlines/stars for cleaner look */
+.scanlines::after {
+  display: none;
+}
+
+.stars {
+  background: none;
+}
+
+/* Intro screen background shimmer */
+@keyframes bg-shimmer {
+  0% {
+    background-color: #261409;
+  }
+
+  33% {
+    background-color: #1a1020;
+  }
+
+  66% {
+    background-color: #0a1a14;
+  }
+
+  100% {
+    background-color: #261409;
+  }
+}
+
+/* Floating particle dots for intro/win BG */
+@keyframes particle-rise-1 {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-rise-2 {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(0.2);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-rise-3 {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-drift {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(18px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ── Blinking/twinkling stars ── */
+@keyframes star-blink {
+
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+  }
+
+  20% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+
+  40% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+
+  60% {
+    opacity: 1.0;
+    transform: scale(1.3);
+  }
+
+  80% {
+    opacity: 0.4;
+    transform: scale(1.0);
+  }
+}
+
+@keyframes star-blink-2 {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1.0);
+  }
+
+  30% {
+    opacity: 0.1;
+    transform: scale(0.7);
+  }
+
+  55% {
+    opacity: 0.95;
+    transform: scale(1.25);
+  }
+
+  75% {
+    opacity: 0.2;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes star-blink-3 {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+
+  15% {
+    opacity: 1.0;
+    transform: scale(1.3);
+  }
+
+  45% {
+    opacity: 0.15;
+    transform: scale(0.75);
+  }
+
+  70% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* ── Shooting star ── */
+@keyframes shoot {
+  0% {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateX(250px) scaleX(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateX(350px) scaleX(0.2);
+    opacity: 0;
+  }
+}
+
+/* ── Room transition & door animations ── */
+@keyframes room-transition {
+  0% {
+    transform: scale(0.9) translateY(12px);
+    opacity: 0;
+  }
+
+  40% {
+    transform: scale(1.02) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translateY(-6px);
+    opacity: 0;
+  }
+}
+
+@keyframes door-open {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes door-burst {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  40% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+/* ── Main page UI animations ── */
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 40px #ffd60a18, 0 0 80px #a855f708, inset 0 0 30px rgba(0, 0, 0, 0.5), 4px 4px 0 #2d1500;
+  }
+
+  50% {
+    box-shadow: 0 0 50px #ffd60a28, 0 0 100px #a855f715, inset 0 0 30px rgba(0, 0, 0, 0.5), 4px 4px 0 #2d1500;
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ── Room promotion animations ── */
+@keyframes room-promote {
+  0% {
+    transform: scale(0.8) translateY(20px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(1.05) translateY(-5px);
+    opacity: 1;
+  }
+
+  60% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.95) translateY(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes room-glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes arrowPulse {
+
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(4px);
+    opacity: 0.8;
+  }
+}
+
+/* ── Dynamic Background Animations ── */
+@keyframes pan-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ── Exit/win animations ── */
+@keyframes door-open-smooth {
+  0% {
+    transform: scale(0.6) rotateY(-15deg);
+    opacity: 0;
+    filter: drop-shadow(0 0 8px #ffd60a);
+  }
+
+  30% {
+    transform: scale(1.08) rotateY(5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 28px #ffd60a) drop-shadow(0 0 14px #ffd60a);
+  }
+
+  60% {
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 24px #ffd60a) drop-shadow(0 0 12px #ffd60a);
+  }
+
+  100% {
+    transform: scale(1.05) rotateY(0deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 32px #ffd60a) drop-shadow(0 0 16px #ffd60a);
+  }
+}
+
+@keyframes textGlow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 16px #ffd60a, 0 0 8px #ffd60a;
+    opacity: 1;
+  }
+
+  50% {
+    text-shadow: 0 0 24px #ffd60a, 0 0 12px #ffd60a, 0 0 6px #ffd60a;
+    opacity: 0.95;
+  }
+}
+
+/* ── White explosion animation ── */
+@keyframes white-explosion {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  40% {
+    opacity: 0.95;
+    transform: scale(1.5);
+  }
+
+  60% {
+    opacity: 0.8;
+    transform: scale(2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+/* ── Letter rain animation ── */
+@keyframes letter-fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(calc(100vh + 50px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ── Epic Cinematic Exit Animations ── */
+@keyframes shake-intense {
+
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: translateX(2px) translateY(-2px);
+  }
+
+  50% {
+    transform: translateX(-2px) translateY(2px);
+  }
+
+  75% {
+    transform: translateX(-2px) translateY(-2px);
+  }
+}
+
+@keyframes door-burst-intense {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes door-open-epic {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+    filter: drop-shadow(0 0 10px #ffd60a);
+  }
+
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: drop-shadow(0 0 50px #ffd60a) drop-shadow(0 0 20px #fff);
+  }
+
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: drop-shadow(0 0 60px #ffd60a) drop-shadow(0 0 30px #fff);
+  }
+}
+
+@keyframes epic-white-explosion {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(3);
+  }
+}
+
+@keyframes pulseGlowEpic {
+
+  0%,
+  100% {
+    text-shadow: 0 0 20px #ffd60a, 0 0 40px #ffd60a, 0 0 10px #fff;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    text-shadow: 0 0 40px #ffd60a, 0 0 60px #ffd60a, 0 0 20px #fff;
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 20px #ffd60a);
+    transform: scale(1);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 40px #ffd60a);
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "en": {
+    "game": {
+      "title": "Polyglot Escape",
+      "tagline": "Powered by Lingo.dev",
+      "intro": {
+        "story": "You're trapped in The Linguist's Study. Every clue is written in a language you don't speak. Your only tool: a magic magnifying glass that translates anything you hover over.",
+        "howToPlay": "How to Play",
+        "tips": {
+          "glass": "Move your mouse — the magnifying glass follows you",
+          "translate": "Hover over foreign text to see instant translation",
+          "puzzles": "Solve 3 puzzles to escape the room",
+          "timer": "Fastest escape wins bragging rights"
+        },
+        "namePlaceholder": "Your name...",
+        "enterRoom": "ENTER THE ROOM →"
+      },
+      "hud": {
+        "glassOn": "Glass ON",
+        "glassOff": "Glass OFF"
+      },
+      "win": {
+        "title": "YOU ESCAPED!",
+        "share": "Share Score",
+        "playAgain": "Play Again",
+        "stats": {
+          "time": "TIME",
+          "puzzles": "PUZZLES",
+          "languages": "LANGUAGES"
+        }
+      }
+    }
+  }
+}
