@@ -10,6 +10,8 @@ jobs:
   translate:
     name: Auto-translate with Lingo.dev
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
