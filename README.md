@@ -16,18 +16,12 @@
 
 ## � Screenshots
 
-*(Replace these with actual screenshots from your game!)*
+<img width="1919" height="927" alt="Screenshot 2026-02-21 220036" src="https://github.com/user-attachments/assets/8cd60c7e-696c-4d06-9806-c6d7ac92adbd" />
 
-<p align="center">
-  <img src="https://via.placeholder.com/600x350/1e0e00/ffd60a?text=Landing+Page+Screenshot" alt="Landing Page" width="45%" />
-  <img src="https://via.placeholder.com/600x350/1e0e00/06d6a0?text=Game+Room+Screenshot" alt="Game Room" width="45%" />
-</p>
-<p align="center">
-  <img src="https://via.placeholder.com/600x350/1e0e00/118ab2?text=Magnifying+Glass+Translation" alt="Translation Tooltip" width="45%" />
-  <img src="https://via.placeholder.com/600x350/1e0e00/8b5a2b?text=Win+Screen+Stats" alt="Win Screen" width="45%" />
-</p>
+<img width="1919" height="928" alt="Screenshot 2026-02-21 220106" src="https://github.com/user-attachments/assets/e6f88f72-9ffa-491d-954d-2ccd28c1d8db" />
 
----
+<img width="1919" height="929" alt="Screenshot 2026-02-21 220146" src="https://github.com/user-attachments/assets/453d593c-73c7-4e8b-8ddd-4971c7545656" />
+
 
 ## �📖 The Story
 
