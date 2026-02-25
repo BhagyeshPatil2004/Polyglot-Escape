@@ -33,7 +33,7 @@ Hover your glass over any foreign text in the room to reveal its hidden meaning 
 
 ---
 
-## 🌟 Why This Wins (The Lingo.dev Integration)
+## 🌟 Why This(The Lingo.dev Integration)
 
 Most projects treat localization as an afterthought—a secondary feature bolted onto the UI. **In Polyglot Escape, Lingo.dev is the main character.**
 
