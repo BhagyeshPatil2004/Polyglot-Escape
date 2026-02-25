@@ -33,13 +33,7 @@ Hover your glass over any foreign text in the room to reveal its hidden meaning 
 
 ---
 
-## 🌟 Why This(The Lingo.dev Integration)
-
-Most projects treat localization as an afterthought—a secondary feature bolted onto the UI. **In Polyglot Escape, Lingo.dev is the main character.**
-
-We turned a B2B utility into a core gameplay mechanic. The game is literally unplayable without the Lingo.dev SDK.
-
-We utilized the full Lingo.dev lifecycle to build a complete product:
+## 🌟 Why the Lingo.dev Integration Matters
 
 ### 1. The Magic Magnifying Glass (React SDK)
 The core gameplay loops relies on the `@lingo.dev/sdk-react`. 
